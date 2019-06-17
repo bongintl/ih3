@@ -1,0 +1,76 @@
+.ih {
+    
+    contain: strict;
+    position: absolute;
+    
+    &__line {
+        position: absolute;
+        background: black;
+        &_top {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: $stroke-width;
+        }
+        &_right {
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: $stroke-width;
+        }
+        &_bottom {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: $stroke-width;
+        }
+        &_left {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: $stroke-width;
+        }
+        &_horizontal {
+            top: 50%;
+            left: 0;
+            height: $stroke-width;
+            width: 100%;
+            transform: translateY(-$stroke-width / 2);
+        }
+        &_vertical {
+            left: 50%;
+            top: 0;
+            width: $stroke-width;
+            height: 100%;
+            transform: translateX(-$stroke-width / 2);
+        }
+    }
+    
+    &__curves {
+        position: absolute;
+        width: $curves-width;
+        height: $curves-height;
+        background-image: url(../www/assets/corner.svg);
+        transform-origin: 50% 0;
+        &_top {
+            top: $stroke-width;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &_right {
+            top: 50%;
+            right: $stroke-width;
+            transform: translateX(50%) rotate(90deg);
+        }
+        &_bottom {
+            left: 50%;
+            bottom: $stroke-width;
+            transform: translate(-50%, 100%) rotate(180deg);
+        }
+        &_left {
+            top: 50%;
+            left: $stroke-width;
+            transform: translate(-50%, 0) rotate(-90deg)
+        }
+    }
+}
